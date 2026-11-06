@@ -1,0 +1,61 @@
+.strip {
+  background: var(--white);
+  border-bottom: 1px solid var(--warm-gray);
+}
+
+.stripinner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.striplabel {
+  font-size: 0.75rem;
+  color: var(--slate-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.toolchips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ivory);
+  border: 1px solid var(--warm-gray);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  border-color: var(--muted-teal);
+}
+
+.chip svg,
+.chip img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+  .stripinner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

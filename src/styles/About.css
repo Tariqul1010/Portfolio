@@ -1,0 +1,138 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 42px;
+  align-items: stretch;
+}
+
+.about-card {
+  background: var(--slate-blue);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-card::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(85, 154, 148, 0.3);
+  border-radius: 50%;
+  right: -90px;
+  bottom: -90px;
+  pointer-events: none;
+}
+
+.about-card-eyebrow {
+  color: #8ed6cf;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.about-card h3 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.about-card p {
+  color: #d1dde6;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.focusline {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  margin-top: 24px;
+  font-size: 0.88rem;
+  color: #e5edf5;
+}
+
+.focusline strong {
+  color: var(--muted-teal);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text h3 {
+  font-size: 1.45rem;
+  margin: 0 0 16px;
+  color: var(--heading-color, var(--slate-blue));
+}
+
+.about-text p {
+  color: var(--slate-gray);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.principle {
+  border: 1px solid var(--warm-gray);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.principle:hover {
+  transform: translateY(-2px);
+  border-color: var(--muted-teal);
+}
+
+.principle b {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--heading-color, var(--slate-blue));
+  font-family: 'Manrope', sans-serif;
+  margin-bottom: 4px;
+}
+
+.principle span {
+  font-size: 0.82rem;
+  color: var(--slate-gray);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .principles {
+    grid-template-columns: 1fr;
+  }
+}

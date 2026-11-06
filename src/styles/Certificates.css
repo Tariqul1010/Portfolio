@@ -1,0 +1,122 @@
+.cert-section {
+  background: var(--ivory);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.cert-card {
+  background: var(--white);
+  border: 1px solid var(--warm-gray);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-thumb {
+  position: relative;
+  border: none;
+  padding: 0;
+  background: #eef2f4;
+  cursor: zoom-in;
+  display: block;
+  height: 230px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.35s ease;
+}
+
+.cert-thumb:hover img {
+  transform: scale(1.04);
+}
+
+.cert-zoom {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(41, 68, 95, 0.9);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.cert-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cert-date {
+  display: inline-block;
+  background: var(--pale-teal);
+  color: #0d685f;
+  border-radius: 999px;
+  padding: 4px 11px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.cert-body h3 {
+  font-size: 1.12rem;
+  margin: 0 0 6px;
+  color: var(--heading-color, var(--slate-blue));
+  line-height: 1.35;
+}
+
+.cert-issuer {
+  color: var(--muted-teal);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.cert-body p {
+  color: var(--slate-gray);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.cert-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+@media (max-width: 1000px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
